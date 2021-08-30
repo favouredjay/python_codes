@@ -1,6 +1,6 @@
 word = input("Enter word or sentence")
 vowel = ['a', 'e', 'i', 'o', 'u']
-isContained = False;
+isContained = False
 for i in word:
     if i in vowel:
         isContained = True
