@@ -1,3 +1,5 @@
+OPTIONS = ['I', 'E', 'N', 'S', 'T', 'F', 'J', 'F']
+
 answers_to_questions = [20]
 questions = [" 1. a. expend energy, enjoy groups or b. conserve energy, enjoy one-on-one",
              "2. a. interpret literally or b. look for meaning and possibilities",
@@ -21,11 +23,24 @@ questions = [" 1. a. expend energy, enjoy groups or b. conserve energy, enjoy on
              "19. a. matter of fact, issue-oriented or b. sensitive, people-oriented, compassionate",
              "20. a. control, govern or b. latitude, freedom"]
 
+
 def choice():
+    global answer
     for i in answers_to_questions:
         print(questions)
         answer = input("Enter your answer")
-        if(answer=="A"):
-            answers_to_questions[i] = answer
+        if answer == "A":
+            answers_to_questions.append(answer)
+        else:
+            answers_to_questions.append(answer)
+        if not answer == "A" or answer == "B":
+            raise Exception("Invalid input")
 
 
+def introvert_extrovert():
+    for i in range(0, len(questions), 4):
+        if answers_to_questions == "A" or "a":
+            E += 1
+
+
+introvert_extrovert()
