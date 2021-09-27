@@ -1,4 +1,16 @@
-OPTIONS = ['I', 'E', 'N', 'S', 'T', 'F', 'J', 'F']
+from enum import Enum
+
+
+class PersonalityTypes(Enum):
+    I = 1
+    E = 2
+    N = 3
+    S = 4
+    T = 5
+    F = 6
+    J = 7
+    F = 8
+
 
 answers_to_questions = [20]
 questions = [" 1. a. expend energy, enjoy groups or b. conserve energy, enjoy one-on-one",
@@ -24,23 +36,17 @@ questions = [" 1. a. expend energy, enjoy groups or b. conserve energy, enjoy on
              "20. a. control, govern or b. latitude, freedom"]
 
 
-def choice():
-    global answer
-    for i in answers_to_questions:
-        print(questions)
-        answer = input("Enter your answer")
-        if answer == "A":
-            answers_to_questions.append(answer)
-        else:
-            answers_to_questions.append(answer)
-        if not answer == "A" or answer == "B":
-            raise Exception("Invalid input")
+def get_question():
+    return questions
 
 
-def introvert_extrovert():
-    for i in range(0, len(questions), 4):
-        if answers_to_questions == "A" or "a":
-            E += 1
+def get_answers():
+    return answers_to_questions
 
 
-introvert_extrovert()
+def get_option_a():
+    return "A"
+
+
+def get_option_b():
+    return "B"
