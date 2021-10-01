@@ -93,5 +93,5 @@ def judging_or_feeling():
 
 def validate_input():
     for i in answers():
-        if answers()[i] != 'A'.casefold() or answers()[i] != 'B':
+        if answers()[i] != 'A'.casefold() or answers()[i] != 'B'.casefold():
             raise Exception("Wrong input")

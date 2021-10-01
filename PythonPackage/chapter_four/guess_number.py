@@ -1,6 +1,6 @@
 import random
 
-number = int(input("Guess my number between 1 and 1000"))
+number = int(input("Guess any number between 1 and 1000"))
 
 correct_number = random.randrange(1, 1000)
 while number != 0:
