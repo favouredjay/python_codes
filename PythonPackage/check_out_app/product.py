@@ -32,7 +32,4 @@ def calculate_amount_and_quantity() -> float:
     return amount_of_item * number_of_items
 
 
-if __name__ == "__main__":
-    amount_of_item = 200
-    number_of_items = 2
-    print(calculate_amount_and_quantity())
+
