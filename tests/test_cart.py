@@ -21,8 +21,10 @@ class cartTest(TestCase):
 
     def test_that_items_can_be_added_to_a_shopping_cart(self):
         shopping_cart = cart
-        cart.add_items_to_cart(self, "mango", 200.0, 2)
-        cart.add_items_to_cart(self, "apple", 40.0, 5)
+        mango = product
+        apple = product
+        cart.add_items_to_cart(self, mango)
+        cart.add_items_to_cart(self, apple)
         for i in shopping_cart.get_items_in_cart(self):
             print(i)
         self.assertEqual(cart.get_total_products(self), 2)
@@ -36,3 +38,18 @@ class cartTest(TestCase):
         self.item_list.append(item_2)
         shopping_cart.change_item_in_a_cart(self, item_2, item_3)
         self.assertEqual(shopping_cart.get_total_products(self), 2)
+
+    def test_that_items_can_be_removed(self):
+        shopping_cart = cart
+        mango = product
+        orange = product
+        pampers = product
+        self.item_list.append(mango)
+        self.item_list.append(orange)
+        self.item_list.append(pampers)
+        self.assertEqual(shopping_cart.get_total_products(self), 3)
+        shopping_cart.remove_items(self, pampers)
+        self.assertEqual(shopping_cart.get_total_products(self), 2)
+
+
+
