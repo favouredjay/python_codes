@@ -1,6 +1,4 @@
-from typing import overload
-
-from PythonPackage.check_out_app import product
+from PythonPackage.Tasks.check_out_app import product
 
 
 class cart:
