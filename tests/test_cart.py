@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from PythonPackage.check_out_app import cart, product
+from PythonPackage.Tasks.check_out_app import cart, product
 
 
 class cartTest(TestCase):
@@ -37,6 +37,8 @@ class cartTest(TestCase):
         self.item_list.append(item_1)
         self.item_list.append(item_2)
         shopping_cart.change_item_in_a_cart(self, item_2, item_3)
+        for i in self.item_list:
+            print(i)
         self.assertEqual(shopping_cart.get_total_products(self), 2)
 
     def test_that_items_can_be_removed(self):
@@ -50,6 +52,3 @@ class cartTest(TestCase):
         self.assertEqual(shopping_cart.get_total_products(self), 3)
         shopping_cart.remove_items(self, pampers)
         self.assertEqual(shopping_cart.get_total_products(self), 2)
-
-
-
